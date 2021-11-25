@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.container {
+  font-family: "Source Code Pro", monospace;
+  display: inline-block;
+  text-decoration: none;
+  color: #00cc00;
+  text-shadow: 0 0 2px #00cc00, 0 0 5px #00cc00;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.link {
+  padding-top: 10%;
+}
+
+.link a{
+color: white;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
