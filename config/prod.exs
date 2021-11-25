@@ -1,6 +1,6 @@
 use Mix.Config
 
-config :good_vibes, CountdownaocWeb.Endpoint,
+config :countdownaoc, CountdownaocWeb.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [scheme: "https", host: "countdownaoc.herokuapp.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
