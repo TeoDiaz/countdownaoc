@@ -3,13 +3,13 @@
 </div>
 
 <div class="container">
-    <h1 id="headline">Countdown for the Advent Of Code</h1>
+    <h1 id="headline">Countdown for the Advent Of Code - UTC</h1>
     <div id="countdown">
         <ul>
-            <li><span id="days"><%= @d %></span>days</li>
-            <li><span id="hours"><%= @h %></span>Hours</li>
-            <li><span id="minutes"> <%= @m %></span>Minutes</li>
-            <li><span id="seconds"><%= @s %></span>Seconds</li>
+            <li><span id="days"><%= @time[:day] %></span>days</li>
+            <li><span id="hours"><%= @time[:hours] %></span>Hours</li>
+            <li><span id="minutes"> <%= @time[:minutes] %></span>Minutes</li>
+            <li><span id="seconds"><%= @time[:seconds] %></span>Seconds</li>
         </ul>
     </div>
 </div>

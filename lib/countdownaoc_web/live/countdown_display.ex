@@ -24,6 +24,11 @@ defmodule CountdownaocWeb.CountdownDisplay do
     {:noreply, socket}
   end
 
+  defp get_remaining_time(%{assigns: %{remaining_time: remaining_time}} = socket) do
+    new_diff = remaining_time - 1
+    assign(socket, remaining_time: new_diff, time: sec_to_str(new_diff))
+  end
+
   defp get_remaining_time(socket) do
     d1 = %DateTime{
       year: 2021,
@@ -33,17 +38,16 @@ defmodule CountdownaocWeb.CountdownDisplay do
       hour: 6,
       minute: 0,
       second: 0,
-      utc_offset: 3600,
+      utc_offset: 0,
       std_offset: 0,
       time_zone: "Europe/Madrid"
     }
 
     d2 = DateTime.utc_now()
 
-    %{week: week, day: day, hours: hours, minutes: minutes, seconds: seconds} =
-      sec_to_str(DateTime.diff(d1, d2))
+    diff = DateTime.diff(d1, d2)
 
-    assign(socket, w: week, d: day, h: hours, m: minutes, s: seconds)
+    assign(socket, remaining_time: diff, time: sec_to_str(diff))
   end
 
   defp sec_to_str(sec) when sec <= 0, do: %{week: 0, day: 0, hours: 0, minutes: 0, seconds: 0}
