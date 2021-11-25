@@ -10,9 +10,9 @@ defmodule CountdownaocWeb.CountdownDisplay do
   def mount(_params, _session, socket) do
     :timer.send_interval(1000, self(), :tick)
 
-    socket = get_remaining_time(socket)
 
-    {:ok, socket}
+
+    {:ok,  get_remaining_time(socket)}
   end
 
   def render(assigns) do
