@@ -6,6 +6,7 @@ defmodule CountdownaocWeb.CountdownDisplay do
   @day @hour * 24
   @week @day * 7
   @divisor [@week, @day, @hour, @minute, 1]
+  @utc_offset @hour * 5
 
   def mount(_params, _session, socket) do
     :timer.send_interval(1000, self(), :tick)
@@ -33,12 +34,12 @@ defmodule CountdownaocWeb.CountdownDisplay do
       month: 12,
       day: 1,
       zone_abbr: "RST",
-      hour: 6,
+      hour: 0,
       minute: 0,
       second: 0,
-      utc_offset: 0,
+      utc_offset: @utc_offset,
       std_offset: 0,
-      time_zone: "Europe/Madrid"
+      time_zone: "America/NewYork"
     }
 
     d2 = DateTime.utc_now()
