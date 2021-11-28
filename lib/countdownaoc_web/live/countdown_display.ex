@@ -34,7 +34,7 @@ defmodule CountdownaocWeb.CountdownDisplay do
       month: 12,
       day: 1,
       zone_abbr: "RST",
-      hour: 0,
+      hour: 5,
       minute: 0,
       second: 0,
       utc_offset: @utc_offset,
