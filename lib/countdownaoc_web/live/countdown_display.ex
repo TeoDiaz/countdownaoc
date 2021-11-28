@@ -37,7 +37,7 @@ defmodule CountdownaocWeb.CountdownDisplay do
       hour: 5,
       minute: 0,
       second: 0,
-      utc_offset: @utc_offset,
+      utc_offset: 0,
       std_offset: 0,
       time_zone: "America/NewYork"
     }
