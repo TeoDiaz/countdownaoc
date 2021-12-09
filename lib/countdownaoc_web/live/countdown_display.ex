@@ -32,7 +32,7 @@ defmodule CountdownaocWeb.CountdownDisplay do
     d1 = %DateTime{
       year: 2021,
       month: 12,
-      day: 9,
+      day: 10,
       zone_abbr: "RST",
       hour: 5,
       minute: 0,
