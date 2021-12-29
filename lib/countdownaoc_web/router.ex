@@ -18,6 +18,7 @@ defmodule CountdownaocWeb.Router do
     pipe_through :browser
 
     live "/", CountdownDisplay
+    live "/create", CreateCountdown
   end
 
   # Other scopes may use custom stacks.
