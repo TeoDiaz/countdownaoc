@@ -3,9 +3,10 @@
 </div>
 
 <div class="container">
-    <h1 id="headline">Countdown for the next Puzzle - (UTC-5)</h1>
+    <h1 id="headline">Countdown to start the 2022 edition - (UTC-5)</h1>
     <div id="countdown">
         <ul>
+            <li><span id="week"><%= @time[:week] %></span>weeks</li>
             <li><span id="days"><%= @time[:day] %></span>days</li>
             <li><span id="hours"><%= @time[:hours] %></span>Hours</li>
             <li><span id="minutes"> <%= @time[:minutes] %></span>Minutes</li>

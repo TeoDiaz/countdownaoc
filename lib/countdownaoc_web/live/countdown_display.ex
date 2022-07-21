@@ -30,9 +30,9 @@ defmodule CountdownaocWeb.CountdownDisplay do
 
   defp get_remaining_time(socket) do
     d1 = %DateTime{
-      year: 2021,
+      year: 2022,
       month: 12,
-      day: 21,
+      day: 1,
       zone_abbr: "RST",
       hour: 5,
       minute: 0,
@@ -52,6 +52,9 @@ defmodule CountdownaocWeb.CountdownDisplay do
   defp sec_to_str(sec) when sec <= 0, do: %{week: 0, day: 0, hours: 0, minutes: 0, seconds: 0}
 
   defp sec_to_str(sec) do
+    IO.inspect( Enum.reduce(@divisor, {sec, []}, fn divisor, {n, acc} ->
+      {rem(n, divisor), [div(n, divisor) | acc]}
+    end))
     {_, [s, m, h, d, w]} =
       Enum.reduce(@divisor, {sec, []}, fn divisor, {n, acc} ->
         {rem(n, divisor), [div(n, divisor) | acc]}
